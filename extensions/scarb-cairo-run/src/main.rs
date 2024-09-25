@@ -2,7 +2,10 @@ use std::env;
 use std::fs;
 
 use anyhow::{anyhow, bail, ensure, Context, Result};
+use cairo_lang_runner::profiling::ProfilingInfoProcessor;
+use cairo_lang_runner::profiling::ProfilingInfoProcessorParams;
 use cairo_lang_runner::short_string::as_cairo_short_string;
+use cairo_lang_runner::ProfilingInfoCollectionConfig;
 use cairo_lang_runner::{RunResultStarknet, RunResultValue, SierraCasmRunner, StarknetState};
 use cairo_lang_sierra::ids::FunctionId;
 use cairo_lang_sierra::program::{Function, ProgramArtifact, VersionedProgram};
@@ -64,6 +67,13 @@ struct Args {
     /// It specified, `[ARGUMENTS]` CLI parameter will be ignored.
     #[arg(long)]
     arguments_file: Option<Utf8PathBuf>,
+
+    /// Path to the profiler output.
+    ///
+    /// If specified, the runner will be executed with profiler enabled.
+    /// The output file will contain Sierra stack trace with weights, in Flamegraph compatible format.
+    #[arg(long)]
+    profiler_output: Option<Utf8PathBuf>,
 }
 
 fn main() -> Result<()> {
@@ -134,7 +144,11 @@ fn main_inner(ui: &Ui, args: Args) -> Result<()> {
             Some(Default::default())
         },
         Default::default(),
-        None,
+        if args.profiler_output.is_some() {
+            Some(ProfilingInfoCollectionConfig::default())
+        } else {
+            None
+        },
     )?;
 
     let result = runner
@@ -145,6 +159,48 @@ fn main_inner(ui: &Ui, args: Args) -> Result<()> {
             StarknetState::default(),
         )
         .with_context(|| "failed to run the function")?;
+
+    if let Some(trace_file) = args.profiler_output {
+        ensure!(
+            sierra_program.debug_info.is_some(),
+            formatdoc! {r#"
+                sierra program artifacts do not contain debug info
+            "#}
+        );
+
+        let profiler_params = ProfilingInfoProcessorParams {
+            min_weight: 0,
+            process_by_stack_trace: true,
+            process_by_user_function: false,
+            process_by_cairo_stack_trace: false,
+            process_by_generic_libfunc: false,
+            process_by_original_user_function: false,
+            process_by_statement: false,
+            process_by_concrete_libfunc: false,
+            process_by_cairo_function: false,
+        };
+        let profiling_info_processor = ProfilingInfoProcessor::new(
+            None,
+            sierra_program.program,
+            Default::default(), // program is already enriched with debug info
+            profiler_params,
+        );
+        match &result.profiling_info {
+            Some(raw_profiling_info) => {
+                let profiling_info = profiling_info_processor.process(&raw_profiling_info);
+                let contents = profiling_info
+                    .stack_trace_weights
+                    .sierra_stack_trace_weights
+                    .ok_or(anyhow!("sierra stack trace weights are undefined"))?
+                    .into_iter()
+                    .map(|(stack, weight)| format!("{} {weight}", stack.join(";")))
+                    .collect::<Vec<String>>()
+                    .join("\n");
+                fs::write(trace_file, contents).with_context(|| "failed to save the trace file")?;
+            }
+            None => println!("Warning: Profiling info not found."),
+        }
+    }
 
     ui.print(Summary {
         result,
