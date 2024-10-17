@@ -3,12 +3,14 @@ use std::fs;
 
 use anyhow::{anyhow, bail, ensure, Context, Result};
 use cairo_lang_runner::short_string::as_cairo_short_string;
+use cairo_lang_runner::ProfilingInfoCollectionConfig;
 use cairo_lang_runner::{RunResultStarknet, RunResultValue, SierraCasmRunner, StarknetState};
 use cairo_lang_sierra::ids::FunctionId;
 use cairo_lang_sierra::program::{Function, ProgramArtifact, VersionedProgram};
 use camino::Utf8PathBuf;
 use clap::Parser;
 use indoc::formatdoc;
+use profiling::save_profiler_output;
 use serde::Serializer;
 
 use scarb_metadata::{
@@ -19,6 +21,7 @@ use scarb_ui::components::Status;
 use scarb_ui::{Message, OutputFormat, Ui};
 
 mod deserialization;
+mod profiling;
 
 const EXECUTABLE_NAME: &str = "main";
 const DEFAULT_MAIN_FUNCTION: &str = "::main";
@@ -64,6 +67,13 @@ struct Args {
     /// It specified, `[ARGUMENTS]` CLI parameter will be ignored.
     #[arg(long)]
     arguments_file: Option<Utf8PathBuf>,
+
+    /// Path to the profiler output.
+    ///
+    /// If specified, the runner will be executed with profiler enabled.
+    /// The output file will contain Sierra stack trace with weights, in Flamegraph compatible format.
+    #[arg(long)]
+    profiler_output: Option<Utf8PathBuf>,
 }
 
 fn main() -> Result<()> {
@@ -134,7 +144,11 @@ fn main_inner(ui: &Ui, args: Args) -> Result<()> {
             Some(Default::default())
         },
         Default::default(),
-        None,
+        if args.profiler_output.is_some() {
+            Some(ProfilingInfoCollectionConfig::default())
+        } else {
+            None
+        },
     )?;
 
     let result = runner
@@ -145,6 +159,14 @@ fn main_inner(ui: &Ui, args: Args) -> Result<()> {
             StarknetState::default(),
         )
         .with_context(|| "failed to run the function")?;
+
+    if let Some(output_path) = args.profiler_output {
+        save_profiler_output(
+            &sierra_program.program, 
+            result.profiling_info.as_ref().ok_or(anyhow!("profiling info is absent"))?, 
+            &output_path
+        ).with_context(|| "failed to write profiling info")?;
+    }
 
     ui.print(Summary {
         result,
