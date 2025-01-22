@@ -73,7 +73,7 @@ cairo-lang-test-plugin = "*"
 cairo-lang-test-runner = "*"
 cairo-lang-utils = { version = "*", features = ["env_logger"] }
 cairo-language-server = "*"
-cairo-lint-core = { path = "../cairo-lint/crates/cairo-lint-core" }
+cairo-lint-core = "*"
 cairo-vm = "1.0.1"
 camino = { version = "1", features = ["serde1"] }
 cargo_metadata = ">=0.18"
@@ -196,7 +196,7 @@ cairo-lang-test-runner = { git = "https://github.com/m-kus/cairo", rev = "a80067
 cairo-lang-test-utils = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-lang-utils = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-language-server = { git = "https://github.com/software-mansion/cairols", rev = "6432886fea7564816078ed140434addf50bbaa23" }
-#cairo-lint-core = { git = "https://github.com/software-mansion/cairo-lint", rev = "b95a1949b932e89179c052efdbf4e21002ce6777" }
+cairo-lint-core = { git = "https://github.com/software-mansion/cairo-lint", rev = "20a858bcfba2319edfd92021e243e6cf95543330" }
 
 [profile.release]
 lto = true
