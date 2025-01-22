@@ -178,8 +178,8 @@ cairo-lang-parser = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6
 cairo-lang-plugins = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-lang-proc-macros = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-lang-project = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
-cairo-lang-runnable-utils = { path = "../cairo/crates/cairo-lang-runnable-utils" }
-cairo-lang-runner = { path = "../cairo/crates/cairo-lang-runner" }
+cairo-lang-runnable-utils = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
+cairo-lang-runner = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-lang-semantic = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-lang-sierra = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }
 cairo-lang-sierra-ap-change = { git = "https://github.com/m-kus/cairo", rev = "a80067d43e6607fecdb0217739d15c6dffc62dc2" }

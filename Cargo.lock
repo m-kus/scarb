@@ -583,21 +583,9 @@ dependencies = [
 [[package]]
 name = "cairo-lang-casm"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-utils 2.9.2",
- "indoc",
- "num-bigint",
- "num-traits 0.2.19",
- "parity-scale-codec",
- "serde",
-]
-
-[[package]]
-name = "cairo-lang-casm"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "indoc",
  "num-bigint",
  "num-traits 0.2.19",
@@ -608,44 +596,20 @@ dependencies = [
 [[package]]
 name = "cairo-lang-compiler"
 version = "2.9.2"
-dependencies = [
- "anyhow",
- "cairo-lang-defs 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-lowering 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-project 2.9.2",
- "cairo-lang-semantic 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-generator 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "indoc",
- "rayon",
- "rust-analyzer-salsa",
- "semver",
- "smol_str",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-compiler"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-project 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-generator 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-lowering",
+ "cairo-lang-parser",
+ "cairo-lang-project",
+ "cairo-lang-semantic",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-generator",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "indoc",
  "rayon",
  "rust-analyzer-salsa",
@@ -657,31 +621,9 @@ dependencies = [
 [[package]]
 name = "cairo-lang-debug"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-utils 2.9.2",
-]
-
-[[package]]
-name = "cairo-lang-debug"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
-]
-
-[[package]]
-name = "cairo-lang-defs"
-version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "itertools 0.12.1",
- "rust-analyzer-salsa",
- "smol_str",
+ "cairo-lang-utils",
 ]
 
 [[package]]
@@ -689,12 +631,12 @@ name = "cairo-lang-defs"
 version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-parser",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "itertools 0.12.1",
  "rust-analyzer-salsa",
  "smol_str",
@@ -703,21 +645,11 @@ dependencies = [
 [[package]]
 name = "cairo-lang-diagnostics"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-utils 2.9.2",
- "itertools 0.12.1",
-]
-
-[[package]]
-name = "cairo-lang-diagnostics"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-filesystem",
+ "cairo-lang-utils",
  "itertools 0.12.1",
 ]
 
@@ -726,15 +658,15 @@ name = "cairo-lang-doc"
 version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-formatter 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-formatter",
+ "cairo-lang-parser",
+ "cairo-lang-semantic",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "itertools 0.12.1",
  "pulldown-cmark",
  "rust-analyzer-salsa",
@@ -744,17 +676,9 @@ dependencies = [
 [[package]]
 name = "cairo-lang-eq-solver"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-utils 2.9.2",
- "good_lp",
-]
-
-[[package]]
-name = "cairo-lang-eq-solver"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "good_lp",
 ]
 
@@ -764,18 +688,18 @@ version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-plugins 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-runnable-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-generator 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-to-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-casm",
+ "cairo-lang-compiler",
+ "cairo-lang-defs",
+ "cairo-lang-filesystem",
+ "cairo-lang-lowering",
+ "cairo-lang-plugins",
+ "cairo-lang-runnable-utils",
+ "cairo-lang-semantic",
+ "cairo-lang-sierra-generator",
+ "cairo-lang-sierra-to-casm",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "cairo-vm",
  "indoc",
  "itertools 0.12.1",
@@ -785,24 +709,10 @@ dependencies = [
 [[package]]
 name = "cairo-lang-filesystem"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-utils 2.9.2",
- "path-clean",
- "rust-analyzer-salsa",
- "semver",
- "serde",
- "smol_str",
- "toml",
-]
-
-[[package]]
-name = "cairo-lang-filesystem"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-utils",
  "path-clean",
  "rust-analyzer-salsa",
  "semver",
@@ -814,32 +724,14 @@ dependencies = [
 [[package]]
 name = "cairo-lang-formatter"
 version = "2.9.2"
-dependencies = [
- "anyhow",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "diffy",
- "ignore",
- "itertools 0.12.1",
- "rust-analyzer-salsa",
- "serde",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-formatter"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-parser",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "diffy",
  "ignore",
  "itertools 0.12.1",
@@ -851,39 +743,17 @@ dependencies = [
 [[package]]
 name = "cairo-lang-lowering"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-defs 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-proc-macros 2.9.2",
- "cairo-lang-semantic 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "id-arena",
- "itertools 0.12.1",
- "log",
- "num-bigint",
- "num-integer",
- "num-traits 0.2.19",
- "rust-analyzer-salsa",
-]
-
-[[package]]
-name = "cairo-lang-lowering"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-proc-macros 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-parser",
+ "cairo-lang-proc-macros",
+ "cairo-lang-semantic",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "id-arena",
  "itertools 0.12.1",
  "log",
@@ -949,31 +819,13 @@ checksum = "c49906d6b1c215e5814be7c5c65ecf2328898b335bee8c2409ec07cfb5530daf"
 [[package]]
 name = "cairo-lang-parser"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-syntax-codegen 2.9.2",
- "cairo-lang-utils 2.9.2",
- "colored",
- "itertools 0.12.1",
- "num-bigint",
- "num-traits 0.2.19",
- "rust-analyzer-salsa",
- "smol_str",
- "unescaper",
-]
-
-[[package]]
-name = "cairo-lang-parser"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax-codegen 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-syntax",
+ "cairo-lang-syntax-codegen",
+ "cairo-lang-utils",
  "colored",
  "itertools 0.12.1",
  "num-bigint",
@@ -986,31 +838,14 @@ dependencies = [
 [[package]]
 name = "cairo-lang-plugins"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-defs 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "indent",
- "indoc",
- "itertools 0.12.1",
- "rust-analyzer-salsa",
- "smol_str",
-]
-
-[[package]]
-name = "cairo-lang-plugins"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-parser",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "indent",
  "indoc",
  "itertools 0.12.1",
@@ -1021,27 +856,14 @@ dependencies = [
 [[package]]
 name = "cairo-lang-primitive-token"
 version = "1.0.0"
-
-[[package]]
-name = "cairo-lang-primitive-token"
-version = "1.0.0"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
-
-[[package]]
-name = "cairo-lang-proc-macros"
-version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "quote",
- "syn 2.0.96",
-]
 
 [[package]]
 name = "cairo-lang-proc-macros"
 version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
  "quote",
  "syn 2.0.96",
 ]
@@ -1049,21 +871,10 @@ dependencies = [
 [[package]]
 name = "cairo-lang-project"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-utils 2.9.2",
- "serde",
- "thiserror 1.0.69",
- "toml",
-]
-
-[[package]]
-name = "cairo-lang-project"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-filesystem",
+ "cairo-lang-utils",
  "serde",
  "thiserror 1.0.69",
  "toml",
@@ -1072,61 +883,17 @@ dependencies = [
 [[package]]
 name = "cairo-lang-runnable-utils"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-casm 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-ap-change 2.9.2",
- "cairo-lang-sierra-gas 2.9.2",
- "cairo-lang-sierra-to-casm 2.9.2",
- "cairo-lang-sierra-type-size 2.9.2",
- "cairo-lang-utils 2.9.2",
- "cairo-vm",
- "itertools 0.12.1",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-runnable-utils"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-ap-change 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-gas 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-to-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-type-size 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-casm",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-ap-change",
+ "cairo-lang-sierra-gas",
+ "cairo-lang-sierra-to-casm",
+ "cairo-lang-sierra-type-size",
+ "cairo-lang-utils",
  "cairo-vm",
  "itertools 0.12.1",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-runner"
-version = "2.9.2"
-dependencies = [
- "ark-ff",
- "ark-secp256k1",
- "ark-secp256r1",
- "cairo-lang-casm 2.9.2",
- "cairo-lang-lowering 2.9.2",
- "cairo-lang-runnable-utils 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-generator 2.9.2",
- "cairo-lang-sierra-to-casm 2.9.2",
- "cairo-lang-starknet 2.9.2",
- "cairo-lang-utils 2.9.2",
- "cairo-vm",
- "itertools 0.12.1",
- "keccak",
- "num-bigint",
- "num-integer",
- "num-traits 0.2.19",
- "rand",
- "sha2",
- "smol_str",
- "starknet-types-core",
  "thiserror 1.0.69",
 ]
 
@@ -1138,14 +905,14 @@ dependencies = [
  "ark-ff",
  "ark-secp256k1",
  "ark-secp256r1",
- "cairo-lang-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-runnable-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-generator 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-to-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-casm",
+ "cairo-lang-lowering",
+ "cairo-lang-runnable-utils",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-generator",
+ "cairo-lang-sierra-to-casm",
+ "cairo-lang-starknet",
+ "cairo-lang-utils",
  "cairo-vm",
  "itertools 0.12.1",
  "keccak",
@@ -1162,43 +929,18 @@ dependencies = [
 [[package]]
 name = "cairo-lang-semantic"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-defs 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-plugins 2.9.2",
- "cairo-lang-proc-macros 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-test-utils 2.9.2",
- "cairo-lang-utils 2.9.2",
- "id-arena",
- "indoc",
- "itertools 0.12.1",
- "num-bigint",
- "num-traits 0.2.19",
- "rust-analyzer-salsa",
- "sha3",
- "smol_str",
- "toml",
-]
-
-[[package]]
-name = "cairo-lang-semantic"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-plugins 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-proc-macros 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-test-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-parser",
+ "cairo-lang-plugins",
+ "cairo-lang-proc-macros",
+ "cairo-lang-syntax",
+ "cairo-lang-test-utils",
+ "cairo-lang-utils",
  "id-arena",
  "indoc",
  "itertools 0.12.1",
@@ -1213,35 +955,10 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra"
 version = "2.9.2"
-dependencies = [
- "anyhow",
- "cairo-lang-utils 2.9.2",
- "const-fnv1a-hash",
- "convert_case",
- "derivative",
- "itertools 0.12.1",
- "lalrpop",
- "lalrpop-util",
- "num-bigint",
- "num-integer",
- "num-traits 0.2.19",
- "regex",
- "rust-analyzer-salsa",
- "serde",
- "serde_json",
- "sha3",
- "smol_str",
- "starknet-types-core",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-sierra"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "const-fnv1a-hash",
  "convert_case",
  "derivative",
@@ -1264,40 +981,12 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-ap-change"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-eq-solver 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-type-size 2.9.2",
- "cairo-lang-utils 2.9.2",
- "itertools 0.12.1",
- "num-bigint",
- "num-traits 0.2.19",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-sierra-ap-change"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-eq-solver 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-type-size 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "itertools 0.12.1",
- "num-bigint",
- "num-traits 0.2.19",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-sierra-gas"
-version = "2.9.2"
-dependencies = [
- "cairo-lang-eq-solver 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-type-size 2.9.2",
- "cairo-lang-utils 2.9.2",
+ "cairo-lang-eq-solver",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-type-size",
+ "cairo-lang-utils",
  "itertools 0.12.1",
  "num-bigint",
  "num-traits 0.2.19",
@@ -1309,10 +998,10 @@ name = "cairo-lang-sierra-gas"
 version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-eq-solver 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-type-size 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-eq-solver",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-type-size",
+ "cairo-lang-utils",
  "itertools 0.12.1",
  "num-bigint",
  "num-traits 0.2.19",
@@ -1322,40 +1011,18 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-generator"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-defs 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-lowering 2.9.2",
- "cairo-lang-parser 2.9.2",
- "cairo-lang-semantic 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "itertools 0.12.1",
- "num-traits 0.2.19",
- "rust-analyzer-salsa",
- "serde",
- "serde_json",
- "smol_str",
-]
-
-[[package]]
-name = "cairo-lang-sierra-generator"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-lowering",
+ "cairo-lang-parser",
+ "cairo-lang-semantic",
+ "cairo-lang-sierra",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "itertools 0.12.1",
  "num-traits 0.2.19",
  "rust-analyzer-salsa",
@@ -1367,34 +1034,15 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-to-casm"
 version = "2.9.2"
-dependencies = [
- "assert_matches",
- "cairo-lang-casm 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-ap-change 2.9.2",
- "cairo-lang-sierra-gas 2.9.2",
- "cairo-lang-sierra-type-size 2.9.2",
- "cairo-lang-utils 2.9.2",
- "indoc",
- "itertools 0.12.1",
- "num-bigint",
- "num-traits 0.2.19",
- "starknet-types-core",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-sierra-to-casm"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "assert_matches",
- "cairo-lang-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-ap-change 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-gas 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-type-size 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-casm",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-ap-change",
+ "cairo-lang-sierra-gas",
+ "cairo-lang-sierra-type-size",
+ "cairo-lang-utils",
  "indoc",
  "itertools 0.12.1",
  "num-bigint",
@@ -1406,46 +1054,10 @@ dependencies = [
 [[package]]
 name = "cairo-lang-sierra-type-size"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-utils 2.9.2",
-]
-
-[[package]]
-name = "cairo-lang-sierra-type-size"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
-]
-
-[[package]]
-name = "cairo-lang-starknet"
-version = "2.9.2"
-dependencies = [
- "anyhow",
- "cairo-lang-compiler 2.9.2",
- "cairo-lang-defs 2.9.2",
- "cairo-lang-diagnostics 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-lowering 2.9.2",
- "cairo-lang-plugins 2.9.2",
- "cairo-lang-semantic 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-generator 2.9.2",
- "cairo-lang-starknet-classes 2.9.2",
- "cairo-lang-syntax 2.9.2",
- "cairo-lang-utils 2.9.2",
- "const_format",
- "indent",
- "indoc",
- "itertools 0.12.1",
- "serde",
- "serde_json",
- "smol_str",
- "starknet-types-core",
- "thiserror 1.0.69",
+ "cairo-lang-sierra",
+ "cairo-lang-utils",
 ]
 
 [[package]]
@@ -1454,18 +1066,18 @@ version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-plugins 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-generator 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet-classes 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-lowering",
+ "cairo-lang-plugins",
+ "cairo-lang-semantic",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-generator",
+ "cairo-lang-starknet-classes",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "const_format",
  "indent",
  "indoc",
@@ -1480,33 +1092,12 @@ dependencies = [
 [[package]]
 name = "cairo-lang-starknet-classes"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-casm 2.9.2",
- "cairo-lang-sierra 2.9.2",
- "cairo-lang-sierra-to-casm 2.9.2",
- "cairo-lang-utils 2.9.2",
- "convert_case",
- "itertools 0.12.1",
- "num-bigint",
- "num-integer",
- "num-traits 0.2.19",
- "serde",
- "serde_json",
- "sha3",
- "smol_str",
- "starknet-types-core",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "cairo-lang-starknet-classes"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-to-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-casm",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-to-casm",
+ "cairo-lang-utils",
  "convert_case",
  "itertools 0.12.1",
  "num-bigint",
@@ -1523,40 +1114,17 @@ dependencies = [
 [[package]]
 name = "cairo-lang-syntax"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-debug 2.9.2",
- "cairo-lang-filesystem 2.9.2",
- "cairo-lang-primitive-token 1.0.0",
- "cairo-lang-utils 2.9.2",
- "num-bigint",
- "num-traits 0.2.19",
- "rust-analyzer-salsa",
- "smol_str",
- "unescaper",
-]
-
-[[package]]
-name = "cairo-lang-syntax"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-primitive-token 1.0.0 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-debug",
+ "cairo-lang-filesystem",
+ "cairo-lang-primitive-token",
+ "cairo-lang-utils",
  "num-bigint",
  "num-traits 0.2.19",
  "rust-analyzer-salsa",
  "smol_str",
  "unescaper",
-]
-
-[[package]]
-name = "cairo-lang-syntax-codegen"
-version = "2.9.2"
-dependencies = [
- "genco",
- "xshell",
 ]
 
 [[package]]
@@ -1574,18 +1142,18 @@ version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-debug 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-generator 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet-classes 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-debug",
+ "cairo-lang-defs",
+ "cairo-lang-filesystem",
+ "cairo-lang-lowering",
+ "cairo-lang-semantic",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-generator",
+ "cairo-lang-starknet",
+ "cairo-lang-starknet-classes",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "indoc",
  "itertools 0.12.1",
  "num-bigint",
@@ -1600,15 +1168,15 @@ version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
  "anyhow",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-runner 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-generator 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-to-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-filesystem",
+ "cairo-lang-runner",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-generator",
+ "cairo-lang-sierra-to-casm",
+ "cairo-lang-starknet",
  "cairo-lang-test-plugin",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "colored",
  "itertools 0.12.1",
  "num-traits 0.2.19",
@@ -1619,37 +1187,13 @@ dependencies = [
 [[package]]
 name = "cairo-lang-test-utils"
 version = "2.9.2"
-dependencies = [
- "cairo-lang-formatter 2.9.2",
- "cairo-lang-utils 2.9.2",
- "colored",
- "log",
- "pretty_assertions",
-]
-
-[[package]]
-name = "cairo-lang-test-utils"
-version = "2.9.2"
 source = "git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2#a80067d43e6607fecdb0217739d15c6dffc62dc2"
 dependencies = [
- "cairo-lang-formatter 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-formatter",
+ "cairo-lang-utils",
  "colored",
  "log",
  "pretty_assertions",
-]
-
-[[package]]
-name = "cairo-lang-utils"
-version = "2.9.2"
-dependencies = [
- "hashbrown 0.14.5",
- "indexmap 2.7.0",
- "itertools 0.12.1",
- "num-bigint",
- "num-traits 0.2.19",
- "schemars",
- "serde",
 ]
 
 [[package]]
@@ -1675,21 +1219,21 @@ version = "2.9.2"
 source = "git+https://github.com/software-mansion/cairols?rev=6432886fea7564816078ed140434addf50bbaa23#6432886fea7564816078ed140434addf50bbaa23"
 dependencies = [
  "anyhow",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
  "cairo-lang-doc",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-formatter 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-filesystem",
+ "cairo-lang-formatter",
+ "cairo-lang-lowering",
  "cairo-lang-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-project 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-parser",
+ "cairo-lang-project",
+ "cairo-lang-semantic",
+ "cairo-lang-starknet",
+ "cairo-lang-syntax",
  "cairo-lang-test-plugin",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "convert_case",
  "crossbeam",
  "governor",
@@ -1722,14 +1266,14 @@ source = "git+https://github.com/software-mansion/cairo-lint?rev=20a858bcfba2319
 dependencies = [
  "annotate-snippets",
  "anyhow",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
+ "cairo-lang-filesystem",
+ "cairo-lang-semantic",
+ "cairo-lang-syntax",
  "cairo-lang-test-plugin",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "if_chain",
  "log",
  "num-bigint",
@@ -5579,24 +5123,24 @@ dependencies = [
  "anyhow",
  "assert_fs",
  "async-trait",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
  "cairo-lang-executable",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-formatter 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-filesystem",
+ "cairo-lang-formatter",
+ "cairo-lang-lowering",
  "cairo-lang-macro 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "cairo-lang-macro-stable 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-sierra-to-casm 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet-classes 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-parser",
+ "cairo-lang-semantic",
+ "cairo-lang-sierra",
+ "cairo-lang-sierra-to-casm",
+ "cairo-lang-starknet",
+ "cairo-lang-starknet-classes",
+ "cairo-lang-syntax",
  "cairo-lang-test-plugin",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-utils",
  "cairo-lint-core",
  "camino",
  "cargo_metadata",
@@ -5700,8 +5244,8 @@ version = "2.9.2"
 dependencies = [
  "anyhow",
  "assert_fs",
- "cairo-lang-runner 2.9.2",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-runner",
+ "cairo-lang-sierra",
  "camino",
  "clap",
  "indoc",
@@ -5722,7 +5266,7 @@ version = "2.9.2"
 dependencies = [
  "anyhow",
  "assert_fs",
- "cairo-lang-sierra 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-sierra",
  "cairo-lang-test-plugin",
  "cairo-lang-test-runner",
  "camino",
@@ -5742,17 +5286,17 @@ version = "2.9.2"
 dependencies = [
  "anyhow",
  "assert_fs",
- "cairo-lang-compiler 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-defs 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-diagnostics 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-compiler",
+ "cairo-lang-defs",
+ "cairo-lang-diagnostics",
  "cairo-lang-doc",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-lowering 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-parser 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-semantic 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-starknet 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-syntax 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-filesystem",
+ "cairo-lang-lowering",
+ "cairo-lang-parser",
+ "cairo-lang-semantic",
+ "cairo-lang-starknet",
+ "cairo-lang-syntax",
+ "cairo-lang-utils",
  "camino",
  "clap",
  "expect-test",
@@ -5777,8 +5321,8 @@ dependencies = [
  "assert_fs",
  "bincode",
  "cairo-lang-executable",
- "cairo-lang-runner 2.9.2",
- "cairo-lang-utils 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-runner",
+ "cairo-lang-utils",
  "cairo-vm",
  "camino",
  "clap",
@@ -5800,7 +5344,7 @@ name = "scarb-metadata"
 version = "1.13.0"
 dependencies = [
  "assert_fs",
- "cairo-lang-filesystem 2.9.2 (git+https://github.com/m-kus/cairo?rev=a80067d43e6607fecdb0217739d15c6dffc62dc2)",
+ "cairo-lang-filesystem",
  "camino",
  "derive_builder",
  "semver",
