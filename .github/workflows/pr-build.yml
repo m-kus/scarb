@@ -21,7 +21,7 @@ jobs:
           target: x86_64-unknown-linux-gnu
 
       - name: Build
-        run: ${{ env.CARGO }} build --release --locked --target x86_64-unknown-linux-gnu
+        run: ${{ env.CARGO }} build --release --locked --target x86_64-unknown-linux-gnu --bin scarb --bin scarb-execute --bin scarb-cairo-test --bin scarb-cairo-run
 
       - name: Create archive
         run: cargo xtask create-archive
